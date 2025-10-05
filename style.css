@@ -19,7 +19,8 @@ body {
     background-color: var(--dark-bg-primary);
     color: var(--dark-text-primary);
     margin: 0;
-    padding: 20px;
+    padding: 1.25rem; /* 20px */
+    font-size: 1rem; /* Base font size */
 }
 
 .container {
@@ -42,6 +43,7 @@ header {
 header h1 {
     margin: 0;
     color: var(--accent-green);
+    font-size: 2.5rem; /* Approx 40px */
 }
 
 .controls {
@@ -59,10 +61,10 @@ header h1 {
 }
 
 .controls select, .controls button {
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem; /* 10px 15px */
     border: 1px solid var(--dark-border-color);
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem; /* 16px */
     background-color: var(--dark-bg-secondary);
     color: var(--dark-text-primary);
 }
@@ -106,18 +108,18 @@ header h1 {
 }
 
 .form-group label {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     color: var(--dark-text-secondary);
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem; /* 5px */
 }
 
 .form-group input {
-    padding: 8px;
+    padding: 0.5rem; /* 8px */
     border: 1px solid var(--dark-border-color);
     background-color: var(--dark-bg-secondary);
     color: var(--dark-text-primary);
     border-radius: 4px;
-    font-size: 1em;
+    font-size: 1rem; /* 1em */
 }
 
 .form-group input:read-only {
@@ -152,10 +154,10 @@ header h1 {
 }
 
 .final-prediction {
-    margin-top: 20px;
-    padding: 15px;
+    margin-top: 1.25rem; /* 20px */
+    padding: 0.9375rem; /* 15px */
     border-radius: 5px;
-    font-size: 1.2em;
+    font-size: 1.2rem; /* 1.2em */
     text-align: center;
     border: 1px solid transparent;
 }
@@ -170,4 +172,63 @@ header h1 {
     background-color: var(--incorrect-bg);
     color: var(--incorrect-text);
     border-color: #8b3a3a;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem; /* Smaller padding on mobile */
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem; /* Smaller heading on mobile */
+    }
+
+    .controls {
+        flex-direction: column; /* Stack controls vertically */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .controls select, .controls button {
+        width: 100%; /* Full width buttons/selects */
+        font-size: 0.9rem;
+    }
+
+    .form-and-results {
+        grid-template-columns: 1fr; /* Stack form and results vertically */
+        gap: 1rem;
+    }
+
+    .form-container, .results-container {
+        padding: 1rem;
+    }
+
+    #candidate-form {
+        grid-template-columns: 1fr; /* Single column for form inputs */
+        max-height: 50vh; /* Adjust max height for scrolling */
+        padding-right: 0;
+    }
+
+    .form-group label {
+        font-size: 0.8rem;
+    }
+
+    .form-group input {
+        font-size: 0.9rem;
+    }
+
+    .result-item strong {
+        width: 120px; /* Adjust width for result labels */
+        font-size: 0.9rem;
+    }
+
+    .final-prediction {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
 }
