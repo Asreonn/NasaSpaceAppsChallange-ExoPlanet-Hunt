@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanet Candidate Classifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Exoplanet Candidate Classifier</h1>
+            <p>A demo interface for the Board of Experts AI model.</p>
+        </header>
+
+        <main>
+            <div class="controls">
+                <label for="sample-select">Load a Sample Candidate:</label>
+                <select id="sample-select">
+                    <option value="">Select a sample...</option>
+                </select>
+                <button id="predict-button">Predict</button>
+            </div>
+
+            <div class="form-and-results">
+                <div class="form-container">
+                    <h2>Candidate Data</h2>
+                    <form id="candidate-form"></form>
+                </div>
+
+                <div class="results-container">
+                    <h2>Prediction Results</h2>
+                    <div id="results-output">Select a sample or enter data and click Predict.</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
